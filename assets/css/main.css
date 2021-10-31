@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,500&display=swap');
 /* ------------------------------------- */
 /* BASIC SETUP */
 /* ------------------------------------- */
@@ -9,18 +10,19 @@
 html{
     background-color: white;
     color: rgb(77, 77, 77);
-    font-family: "Lato","arial", sans-serif;
+    font-family: "Poppins";
     font-weight: 300px;
     font-size: 20px;
     text-rendering: optimizeLegibility;
     margin: 0px auto;
 
 }
+
 /* ------------------------------------- */
 /* REUSABLE COMPONENTS */
 /* ------------------------------------- */
 .row{
-    width: 1140px;
+    /* width: 1140px; */
     margin: 0 auto;
 }
 section{
@@ -40,37 +42,34 @@ section{
     line-height: 145%;
 }
 /* -------ICONS------- */
-.icon-big{
-    font-size: 350%;
-    display: block;
-    color: coral;
-    margin-bottom: 10px;
+.icons {
+    position: relative;
+    left: 0;
+    height: 0.7rem;
+    width: 0.7rem;
+    /* margin-right: 10px; */
 }
-.icon-small {
-    display: inline-block;
-    width: 30px;
-    text-align: center;
-    color: #e67e22;
-    font-size: 120%;
-    margin-right: 10px;
-    /* secrets to align text and icons */
-    line-height: 120%;
-    vertical-align: middle;
-    margin-top: -5px;
+.icon-bg {
+    margin-left: 3rem;
+    height: 3rem;
+    width: 3rem;
+    background-color: #F3D9D9;
+    padding: 00.5rem;
+    border-radius: 50%;
 }
 
 /* -------HEADINGS------- */
 h1, h2, h3{
     
     font-weight: 300;
-    text-transform: uppercase;
+    
     
     
 }
 h1{
     margin-top: 0px; 
     margin-bottom: 20px;
-    font-size: 240%;
+    font-size: 400%;
 
 }
 
@@ -154,6 +153,7 @@ a:active {
 header nav .row {
     display: flex;
     justify-content: space-between;
+    /* border-bottom: 2px solid #ccc */
 }
 
 .logo {
@@ -188,6 +188,23 @@ header nav .row {
 /* ------------------------------------- */
 /* HERO */
 /* ------------------------------------- */
+.about-content nav {
+    width: 100%;
+    margin-bottom: 2rem;
+}
+.about-content .nav ul {
+    width: fit-content;
+    display: flex;
+    /* margin-bottom: 2rem; */
+}
+.about-content .nav li {
+    padding: .3em 1em;
+    color: var(--light-gray);
+    position: relative;
+    display: block;
+    cursor: pointer;
+    font-size: 1em;
+}
 
 #about .about-content,
 #cont .content  {
@@ -200,7 +217,9 @@ header nav .row {
 #cont .other-section {
     flex: 1;  
     
+    
 }
+
 #about .about-text
 {
     /* text-align: justify; */
@@ -369,10 +388,7 @@ header nav .row {
     font-weight: 100;
    
 }
-.plan-price-meal {
-    font-size: 80%;
 
-}
 .small-month {
     font-size: 30%;
     font-weight: 300;
@@ -406,6 +422,18 @@ i {
     border-radius: 8px; 
 }
 
+.section-plans .plan-box ul li {
+    font-size: 1rem;
+    padding-left: 2rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+
+.section-plans .plan-box ul li::before {
+    content: url('../images/check.svg');
+    position: absolute;
+    left: 0;
+}
 blockquote {
     padding: 2%;
     font-style: italic;
@@ -416,11 +444,11 @@ blockquote {
 }
 blockquote:before {
     content: "\201C";
-    font-size: 500%;
+    font-size: 600%;
     display: block;
     position: absolute;
-    top: -5px;
-    left: -5px;
+    top: -15px;
+    left: -30px;
 }
 
 .block, h6{
@@ -436,8 +464,142 @@ blockquote:before {
     bottom: -85%;
     right: 34%;
 }
-  
+
+.customers .row .customer {
+    display: flex;
+}
+ .customer-things {
+    box-shadow:  0 3px 10px rgb(0 0 0 / 0.2);
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+}
 
 
-  
+.first-customer {
+    margin-left: 8rem;
+    height: 35%;
+    width: 60%;
+    
+}
+ .second-customer {
+    width: 80%;
+}
+
+.third-customer {
+   
+    width: 55%;
+    
+}
+
+/* ------------------------------------- */
+/*  WE serve */
+/* ------------------------------------- */
+
+.text-serve {
+    width: 40%;
+}
+.text-serve .text {
+    font-size: 2.5rem;
+}
+
+.other-section-serve {
+    margin-left: 7rem;
+    padding: 0 1rem;
+}
+.image-other {
+    padding: 0 0.5rem;
+}
+
+/* ------------------------------------- */
+/* Tagline */
+/* ------------------------------------- */
+
+
+.tagline .row {
+    background-color: #F7FAFE;
+    text-align: center;
+    padding: 3em 0;
+    position: relative;
+    border-radius: 8px;
+       
+}
+
+.tagline .text{
+    font-size: 3.5em;
+    line-height: 1.3;
+    font-weight: 700;
+    margin-bottom: 1em;
+}
+
+
+
+
+footer {
+    background-color: #B01C08;
+    padding: 50px;
+    font-size: 80%;
+}
+.footer-sec {
+    padding: 0.5rem;
+}
+.footer-nav {
+    list-style: none;
+    float: left;
+}
+.social-links {
+    list-style: none;
+    float: right;
+
+}
+.footer-nav li,
+.social-links li {
+    display: inline-block; 
+    margin-right: 20px; 
+    padding: 0.5rem 0;
+}
+.footer-nav li:last-child,
+.social-links li:last-child {
+    margin-right: 0;
+}
+
+.footer-nav li a:link,
+.footer-nav li a:visited,
+.social-links li a:link,
+.social-links li a:visited {
+    text-decoration: none;
+    border: 0;
+    color: #fff;
+    transition: color 0.2s;
+    
+
+}
+.footer-nav li a:hover,
+.footer-nav li a:active {
+    color: #fff;
+}
+
+
+
+
+.footer .row {
+    display: flex;
+}
+
+.host {
+    margin-top: 2rem;
+}
+.p-bottom {
+    color: #fff;
+}
+
+.img-footer{
+    margin-bottom: 2rem;
+}
+h5 {
+    color: #fff;
+    font-size: 15px;
+}
+
+
 
