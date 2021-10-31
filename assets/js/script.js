@@ -1,5 +1,5 @@
 // Creating the hero tabs functionality
-let tabs = document.getElementsByClassName("tabs");
+let tabs = document.getElementsByClassName("tab");
 tabs = Array.from(tabs);
 let contentReset = (parent) => {
   //function to hide all the contents
@@ -25,4 +25,13 @@ tabs.forEach((tab) => {
     const content = document.getElementById(e.target.getAttribute("data-to"));
     showContent(e.target, content);
   });
+});
+
+
+// creating the mobile navigator toggler
+let navToggler = document.querySelector(".nav-toggler");
+let nav = document.querySelector("header nav");
+navToggler.addEventListener("click", () => {
+  navToggler.classList.toggle("show");
+  nav.classList.toggle("show");
 });
